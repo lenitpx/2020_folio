@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import AppHeader from './header/AppHeader.js'
+import AppContact from './contact/AppContact.js'
+import AppCount from './count/AppCount.js'
+import AppEvolution from './evolution/AppEvolution.js'
 import './App.css';
+
+          // Edit <code>src/App.js</code> and save to reload.
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <AppHeader />
+        <AppContact />
+        <AppCount />
+        <AppEvolution />
     </div>
   );
 }
