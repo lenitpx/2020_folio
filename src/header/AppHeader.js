@@ -16,7 +16,7 @@ function AppHeader() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          HeliumDevelopment
+          HeleniumDevelopment
         </a>
       </header>
     )

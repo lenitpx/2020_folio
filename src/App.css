@@ -9,9 +9,26 @@
   pointer-events: none;
 }
 
+ /* #fbcf61 */
+
+code {
+  color: #fb618d;
+}
+
+.contact-git-content {
+  display: none;
+}
+
+.contact-git-icon:hover .contact-git-content {
+  display: block;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+  .contact-git-icon:hover {
+    animation: App-logo-spin infinite alternate 1s linear;
   }
 }
 
@@ -34,6 +51,7 @@
 
 .App-contact {
   min-height: 100vh;
+  color: #61dafb;
   display: flex;
   flex-direction: row;
   align-items: center;
