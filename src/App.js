@@ -4,8 +4,14 @@ import AppContact from './contact/AppContact.js'
 import AppCount from './count/AppCount.js'
 import AppEvolution from './evolution/AppEvolution.js'
 import './App.css';
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 
-          // Edit <code>src/App.js</code> and save to reload.
+const homeCache = new InMemoryCache();
+
+const client = new ApolloClient({
+  homeCache
+})
 
 function App() {
   return (

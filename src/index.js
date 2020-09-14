@@ -4,9 +4,23 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { ApolloProvider } from '@apollo/react-hooks';
+import { HttpLink } from 'apollo-link-http';
+import { ApolloClient } from 'apollo-client';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  link: new HttpLink({
+    uri: 'https://graphql-pokemon.now.sh/'
+  })
+})
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ApolloProvider client={client}>
+       <App />
+    </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
