@@ -15,20 +15,9 @@ code {
   color: #fb618d;
 }
 
-.contact-git-content {
-  display: none;
-}
-
-.contact-git-icon:hover .contact-git-content {
-  display: block;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
-  .contact-git-icon:hover {
-    animation: App-logo-spin infinite alternate 1s linear;
   }
 }
 
@@ -57,6 +46,12 @@ code {
   align-items: center;
   justify-content: space-around;
   font-size: calc(10px + 4vmin);
+}
+
+.App-contact a {
+  color: #61dafb;
+  text-decoration: none;
+  font-size: calc(10px + 2vmin)
 }
 
 .App-count {
