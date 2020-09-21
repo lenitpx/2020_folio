@@ -12,7 +12,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: 'https://graphql-pokemon.now.sh/'
+    uri: 'https://api.github.com/graphql'
   })
 })
 
