@@ -1,8 +1,9 @@
 .App {
   background: #FEAC5E;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(45deg, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
 code {
@@ -10,67 +11,107 @@ code {
 }
 
 .App-header {
-  height: 7vh;
+  height: 10vh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  font-size: 1.5em;
-  padding-left: 2vw;
+  justify-content: center;
+  font-family: 'Play', sans-serif;
+  text-shadow: 1px 1px 2px black, 0 0 1em #4BC0C8, 0 0 0.2em #FEAC5E;
 }
 
-.App-header .titleSplash {
-  margin-right: auto;
+.App-header .titleSplash a {
   color: white;
+  text-decoration: none;
+  font-size: 3em;
 }
 
 .App-header .menuItem {
-  padding-right: 2vw;
-  color: white;
+  display: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-.App-contact {
-  min-height: 100vh;
-  color: #61dafb;
+.mobile-body {
+  height: 90vh;
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  font-size: calc(10px + 4vmin);
-}
-
-.App-contact a {
-  color: #61dafb;
-  text-decoration: none;
-  font-size: calc(10px + 2vmin)
-}
-
-.App-count {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 3vmin);
 }
 
-.App-evolution {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.mobile-body .work-mobile-link {
+  height: 40vh;
+  width: 90vw;
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 75em) {
+  .App-header {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2em;
+    padding-left: 2vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App-header .titleSplash {
+    margin-right: auto;
+  }
+
+  .App-header .titleSplash a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .App-header .menuItem a {
+    display: flex;
+    padding-right: 2vw;
+    color: white;
+    text-decoration: none;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+
+  .App-contact {
+    min-height: 100vh;
+    color: #61dafb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: calc(10px + 4vmin);
+  }
+
+  .App-contact a {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: calc(10px + 2vmin)
+  }
+
+  .App-count {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 3vmin);
+  }
+
+  .App-evolution {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+  }
+
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }

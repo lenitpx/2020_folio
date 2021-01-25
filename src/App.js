@@ -12,14 +12,31 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="titleSplash">beansoft</div>
-        <div className="menuItem">work</div>
-        <div className="menuItem">background</div>
-        <div className="menuItem">contact</div>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <div className="titleSplash"><Link to="/">beansoft</Link></div>
+          <div className="menuItem"><Link to="/work">work</Link></div>
+          <div className="menuItem"><Link to="/background">background</Link></div>
+          <div className="menuItem"><Link to="/contact">contact</Link></div>
+        </header>
+        <div className="mobile-body">
+          <div className="work-mobile-link">
+          </div>
+        </div>
+        <Switch>
+          <Route path="/work">
+            <AppWork />
+          </Route>
+          <Route path="/background">
+            <AppCount />
+          </Route>
+          <Route path="/contact">
+            <AppContact />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
